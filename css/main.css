@@ -1,33 +1,122 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-ExtraLight.ttf') format(opentype);
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-ExtraLight.ttf') format(opentype);
+}
+
+:root {
+    --fonte-padrao: Arial, Verdana, sans-serif;
+    --fonte-texto: 'Inter', Helvetica, sans-serif;
+    --fonte-titulo: 'Montserrat', Helvetica, sans-serif;
+
+    --color01: #73192A;
+    --color02: #261E21;
+    --color03: #8C7974;
+    --color04: #734B3D;
+    --color05: #7E898D;
+    --color06: #AEBABF;
+    --color07: #C0C5CB;
+
+}
+
 * {
     margin: 0px;
 }
 
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--fonte-padrao);
     font-size: 1em;
 }
 
 header {
-    background: red;
-    height: 36px;
-    padding: 10px;
+    background: var(--color02);
+   
+    
+    padding-bottom: 100px;
 }
 
-header > h1 {
-    position: relative;
-    margin: 0px;
-}
+
 
 nav {
     background: yellow;
-    text-align: right;
+   
 }
 
 nav > ul > li {
     list-style-type: none;
-    display: inline-flex;
+    margin-left: 10px;
+    display: inline;
     background: orange;
+}
+
+/*Conteúdo principal*/
+
+main {
+    font-family: var(--fonte-texto);
+}
+
+section {
+    background-color: var(--color07);
+    padding: 20px;
+    max-height: 600px;
+}
+
+section.argumento {
+    background-image: url('../image/fusca-700.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+
+    scroll-snap-type: x mandatory;
+    display: flex;
+    gap: 20px;
+    overflow: scroll;
+    scroll-padding: 10px;
+}
+
+.argumento > article {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+
+    background-color: rgba(255, 255, 255, 0.329);
+    line-height: 2em;
+    padding-left: 10px;
+    border: 1px solid black;
+    margin: 0px 0px  10px 0px;
+    max-width: 500px;
+
+}
+
+
+article {
+    background-color: var(--color04);
+}
+
+article.chamada {
+    background-color: white;
+    display: inline-block;
+    padding: 10px;
+    max-width: 500px;
+}
+
+
+
+
+
+/*Rodapé*/
+
+footer {
+    background-color: var(--color02);
+    color: var(--color07);
+    padding: 10px;
+    text-align: center;
 }
