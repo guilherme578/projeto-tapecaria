@@ -42,10 +42,11 @@
 
     header {
         display: flex;
-        background-color: var(--color03);
+        background-color: var(--color05);
         width: 100vw;
         justify-content: space-between;
         
+        box-shadow: 3px 3px 12px #734b3d77;
     }
 
     nav#menu {
@@ -89,7 +90,7 @@
     span#intmenu {
         display: block;
         text-align: right;
-        background-color: #73192A;
+        
         margin: 0px 10px;
         padding: 10px;
         
@@ -103,5 +104,37 @@
         padding: 10px;
     }
  
+
+}
+
+/* Configuração para tablet e monitores de baixa resolução */
+
+@media screen and (min-width:768px) and (max-width:992px)  {
+    
+    span#intmenu {
+        display: none;
+    }
+
+    nav#menu {
+        display: block;
+    }
+
+}
+
+/* Configuração para Monitores e dispositivos com maiores resoluções */
+
+@media screen and (min-width:992px) {
+
+    header {
+        display: flex;
+    }
+
+    span#intmenu {
+        display: none;
+    }
+
+    nav#menu {
+        display: block;
+    }
 
 }
