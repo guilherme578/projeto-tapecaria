@@ -25,98 +25,85 @@
 
 }
 
-* {
-    margin: 0px;
-}
 
+@media all {
 
-body {
-    font-family: var(--fonte-padrao);
-    font-size: 1em;
-}
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
 
-header {
-    background: var(--color02);
-   
-    
-    padding-bottom: 100px;
-}
+    html, body {
+        background-color: var(--color07);
+        width: 100vw;
+        height: 100vh;
+        font-family: var(--fonte-padrao);
+    }
 
+    header {
+        background-color: var(--color05);
+        width: 100vw;
 
+    }
 
-nav {
-    background: yellow;
-   
-}
+    nav#menu {
+        text-align: right;
+    }
 
-nav > ul > li {
-    list-style-type: none;
-    margin-left: 10px;
-    display: inline;
-    background: orange;
-}
+    nav#menu > ul {
+        text-align: left;
+        padding: 10px;
+        list-style-type: none;
+    }
+    nav#menu li {
+        margin: 5px;
+    }
+    nav#menu a {
+        display: inline-block;
+        text-align: center;
+        background-color: var(--color04);
+        color: var(--color03);
+        font-size: 1em;
+        font-weight: bold;
+        width: 30%;
+        border-radius: 0px 12px;
+        padding: 10px;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
 
-/*Conteúdo principal*/
+    nav#menu a:hover {
+        background-color: var(--color03);
+        color: var(--color04);
+        border-radius: 12px 0px;
+        transition: border-radius, 0.5s;
+        transition-timing-function: ease;
+    }
 
-main {
-    font-family: var(--fonte-texto);
-}
+    nav#menu {
+        display: none;
+    }
 
-section {
-    background-color: var(--color07);
-    padding: 20px;
-    max-height: 600px;
-}
+    span#intmenu {
+        display: block;
+        text-align: right;
+        background-color: #73192A;
+        margin: 0px 10px;
+        padding: 5px;
+        
+        color: var(--color02);
+        font-size: 2.5em;
+    }
 
-section.argumento {
-    background-image: url('../image/fusca-700.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center center;
+    div#logo{
+        display: block;
+        width: 20%;
+        height: 50px;
+        
+        background-image: url('../image/4.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 
-    scroll-snap-type: x mandatory;
-    display: flex;
-    gap: 20px;
-    overflow: scroll;
-    scroll-padding: 10px;
-}
-
-.argumento > article {
-    flex: 0 0 100%;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-
-    background-color: rgba(255, 255, 255, 0.329);
-    line-height: 2em;
-    padding-left: 10px;
-    border: 1px solid black;
-    margin: 0px 0px  10px 0px;
-    max-width: 500px;
-
-}
-
-
-article {
-    background-color: var(--color04);
-}
-
-article.chamada {
-    background-color: white;
-    display: inline-block;
-    padding: 10px;
-    max-width: 500px;
-}
-
-
-
-
-
-/*Rodapé*/
-
-footer {
-    background-color: var(--color02);
-    color: var(--color07);
-    padding: 10px;
-    text-align: center;
 }
