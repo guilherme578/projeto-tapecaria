@@ -2,10 +2,13 @@
 
 var icone_menu = document.getElementById('intmenu')
 var menu = document.getElementById('menu')
+var cab = document.getElementById('hd')
 
 function intMenu() {
     if (menu.style.display == 'block') {
         menu.style.setProperty('display', 'none')
+        
+        
     }
     else {
         menu.style.setProperty('display', 'block')
